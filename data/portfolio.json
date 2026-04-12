@@ -1,0 +1,16 @@
+{
+  "last_updated": "2026-04-12T00:00:00",
+  "cash": 100000.00,
+  "starting_capital": 100000.00,
+  "positions": {},
+  "trades_history": [],
+  "performance": {
+    "realized_pnl": 0.0,
+    "total_trades": 0,
+    "winning_trades": 0,
+    "month_start_value": 100000.00,
+    "peak_value": 100000.00,
+    "max_drawdown_pct": 0.0
+  },
+  "monthly_drawdown_stop_active": false
+}
