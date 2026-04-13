@@ -1,5 +1,4 @@
 import pandas as pd
-import pandas_ta as ta
 import numpy as np
 from scipy.signal import find_peaks
 
@@ -13,16 +12,23 @@ def ema(series: pd.Series, period: int) -> pd.Series:
 
 
 def rsi(series: pd.Series, period: int = 14) -> float | None:
-    r = ta.rsi(series, length=period)
-    return round(float(r.iloc[-1]), 2) if r is not None and not r.dropna().empty else None
+    delta = series.diff()
+    gain = delta.clip(lower=0).rolling(period).mean()
+    loss = (-delta.clip(upper=0)).rolling(period).mean()
+    rs = gain / loss.replace(0, np.nan)
+    r = 100 - (100 / (1 + rs))
+    val = r.iloc[-1]
+    return round(float(val), 2) if pd.notna(val) else None
 
 
-def macd_histogram(series: pd.Series) -> float | None:
-    m = ta.macd(series)
-    if m is None or m.empty:
-        return None
-    col = [c for c in m.columns if "MACDh" in c]
-    return round(float(m[col[0]].iloc[-1]), 4) if col else None
+def macd_histogram(series: pd.Series, fast: int = 12, slow: int = 26, signal: int = 9) -> float | None:
+    ema_fast = series.ewm(span=fast, adjust=False).mean()
+    ema_slow = series.ewm(span=slow, adjust=False).mean()
+    macd_line = ema_fast - ema_slow
+    signal_line = macd_line.ewm(span=signal, adjust=False).mean()
+    hist = macd_line - signal_line
+    val = hist.iloc[-1]
+    return round(float(val), 4) if pd.notna(val) else None
 
 
 def volume_ratio(volume: pd.Series, period: int = 50) -> float:
@@ -52,7 +58,6 @@ def detect_vcp(df: pd.DataFrame) -> dict:
         return {"detected": False, "pivot": None, "contractions": 0}
 
     recent_peak = peaks_idx[-1]
-    base_start = int(max(0, recent_peak - 65 * 1))
 
     base_troughs = [t for t in troughs_idx if t > recent_peak]
     base_peaks = [p for p in peaks_idx if p > recent_peak]
@@ -62,11 +67,11 @@ def detect_vcp(df: pd.DataFrame) -> dict:
 
     contractions = []
     for i in range(len(base_troughs) - 1):
-        depth_i = (close[base_peaks[i] if i < len(base_peaks) else recent_peak] - close[base_troughs[i]]) / close[base_peaks[i] if i < len(base_peaks) else recent_peak]
-        depth_next = (close[base_peaks[i + 1] if i + 1 < len(base_peaks) else recent_peak] - close[base_troughs[i + 1]]) / close[base_peaks[i + 1] if i + 1 < len(base_peaks) else recent_peak]
-        vol_ratio_i = volume[base_troughs[i]]
-        vol_ratio_next = volume[base_troughs[i + 1]]
-        if depth_next < depth_i * 0.6 and vol_ratio_next < vol_ratio_i:
+        ref_peak_i = base_peaks[i] if i < len(base_peaks) else recent_peak
+        ref_peak_next = base_peaks[i + 1] if i + 1 < len(base_peaks) else recent_peak
+        depth_i = (close[ref_peak_i] - close[base_troughs[i]]) / close[ref_peak_i]
+        depth_next = (close[ref_peak_next] - close[base_troughs[i + 1]]) / close[ref_peak_next]
+        if depth_next < depth_i * 0.6 and volume[base_troughs[i + 1]] < volume[base_troughs[i]]:
             contractions.append({"depth_pct": round(depth_next * 100, 2)})
 
     last_5 = close[-5:]
@@ -92,8 +97,9 @@ def breakout_signal(df: pd.DataFrame, pivot: float) -> bool:
 def pocket_pivot(df: pd.DataFrame) -> bool:
     vol = df["volume"].values
     close = df["close"].values
-    today_up = close[-1] > close[-2]
-    if not today_up:
+    if not close[-1] > close[-2]:
         return False
-    max_down_vol = max(vol[i] for i in range(-11, -1) if close[i] < close[i - 1])
-    return float(vol[-1]) > max_down_vol
+    down_vols = [vol[i] for i in range(-11, -1) if close[i] < close[i - 1]]
+    if not down_vols:
+        return False
+    return float(vol[-1]) > max(down_vols)

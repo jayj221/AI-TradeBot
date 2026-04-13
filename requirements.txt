@@ -1,6 +1,5 @@
 yfinance==0.2.40
 pandas==2.2.2
-pandas-ta
 numpy==1.26.4
 scipy==1.13.0
 scikit-learn==1.4.1
