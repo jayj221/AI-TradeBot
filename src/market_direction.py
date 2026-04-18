@@ -15,7 +15,16 @@ def _get_fred():
 
 def classify_market() -> dict:
     spy = yf.Ticker("SPY").history(period="6mo")
-    spy.index = spy.index.tz_localize(None)
+    if spy.empty:
+        return {
+            "classification": "CORRECTION",
+            "above_sma50": False, "above_sma200": False,
+            "distribution_days": 0, "follow_through_day": False,
+            "vix": 20.0, "vix_elevated": False,
+            "yield_spread_10y2y": None, "allow_new_buys": False,
+        }
+    if hasattr(spy.index, "tz") and spy.index.tz is not None:
+        spy.index = spy.index.tz_convert(None)
     close = spy["Close"]
     volume = spy["Volume"]
 

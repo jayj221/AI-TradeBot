@@ -12,7 +12,8 @@ def get_ohlcv(symbol: str, period: str = "2y") -> pd.DataFrame | None:
         df = yf.Ticker(symbol).history(period=period)
         if df.empty or len(df) < 200:
             return None
-        df.index = df.index.tz_localize(None)
+        if hasattr(df.index, "tz") and df.index.tz is not None:
+            df.index = df.index.tz_convert(None)
         return df[["Open", "High", "Low", "Close", "Volume"]].rename(columns=str.lower)
     except Exception as e:
         print(f"[fetcher] ohlcv {symbol}: {e}")
