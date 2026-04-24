@@ -1,6 +1,72 @@
 {
-  "date": "2026-04-24",
-  "market": "CORRECTION",
-  "actionable": [],
-  "watching": []
+  "NVDA": {
+    "price": 209.54,
+    "above_sma50": true,
+    "above_sma200": true,
+    "pct_from_high": 0.0,
+    "updated": "2026-04-24"
+  },
+  "META": {
+    "price": 678.03,
+    "above_sma50": true,
+    "above_sma200": false,
+    "pct_from_high": -13.97,
+    "updated": "2026-04-24"
+  },
+  "AMZN": {
+    "price": 262.93,
+    "above_sma50": true,
+    "above_sma200": true,
+    "pct_from_high": 0.0,
+    "updated": "2026-04-24"
+  },
+  "AAPL": {
+    "price": 269.88,
+    "above_sma50": true,
+    "above_sma200": true,
+    "pct_from_high": -5.61,
+    "updated": "2026-04-24"
+  },
+  "MSFT": {
+    "price": 419.56,
+    "above_sma50": true,
+    "above_sma200": false,
+    "pct_from_high": -22.28,
+    "updated": "2026-04-24"
+  },
+  "GOOGL": {
+    "price": 342.92,
+    "above_sma50": true,
+    "above_sma200": true,
+    "pct_from_high": -0.15,
+    "updated": "2026-04-24"
+  },
+  "CRWD": {
+    "price": 445.0,
+    "above_sma50": true,
+    "above_sma200": false,
+    "pct_from_high": -20.18,
+    "updated": "2026-04-24"
+  },
+  "ANET": {
+    "price": 178.88,
+    "above_sma50": true,
+    "above_sma200": true,
+    "pct_from_high": 0.0,
+    "updated": "2026-04-24"
+  },
+  "AXON": {
+    "price": 391.55,
+    "above_sma50": false,
+    "above_sma200": false,
+    "pct_from_high": -55.04,
+    "updated": "2026-04-24"
+  },
+  "DECK": {
+    "price": 108.85,
+    "above_sma50": true,
+    "above_sma200": true,
+    "pct_from_high": -15.87,
+    "updated": "2026-04-24"
+  }
 }
