@@ -1,0 +1,9 @@
+{
+  "date": "2026-04-26",
+  "total_value": 100000.0,
+  "cash": 100000.0,
+  "return_pct": 0.0,
+  "open_positions": 0,
+  "monthly_drawdown_stop": false,
+  "vix_adjusted_sizing": false
+}
