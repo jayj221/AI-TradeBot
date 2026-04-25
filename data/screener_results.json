@@ -1,58 +1,35 @@
 {
+  "date": "2026-04-26",
   "passed": [
     {
-      "symbol": "NVDA",
-      "price": 209.45,
-      "trend_score": 6,
-      "above_sma50": true,
-      "above_sma200": true
-    },
-    {
-      "symbol": "AMZN",
-      "price": 262.65,
-      "trend_score": 5,
-      "above_sma50": true,
-      "above_sma200": true
-    },
-    {
-      "symbol": "AAPL",
-      "price": 270.16,
-      "trend_score": 6,
-      "above_sma50": true,
-      "above_sma200": true
-    },
-    {
       "symbol": "GOOGL",
-      "price": 343.0,
-      "trend_score": 7,
-      "above_sma50": true,
-      "above_sma200": true
+      "price": 344.4,
+      "trend_score": 5
     },
     {
       "symbol": "ANET",
-      "price": 178.98,
-      "trend_score": 7,
-      "above_sma50": true,
-      "above_sma200": true
-    },
-    {
-      "symbol": "DECK",
-      "price": 108.76,
-      "trend_score": 6,
-      "above_sma50": true,
-      "above_sma200": true
+      "price": 176.91,
+      "trend_score": 5
     }
   ],
   "failed": [
+    "NVDA",
     "META",
+    "AMZN",
+    "AAPL",
     "MSFT",
     "CRWD",
     "AXON",
+    "DECK",
     "SNOW",
     "CELH",
     "LULU",
     "ENPH",
-    "SMCI"
-  ],
-  "date": "2026-04-24"
+    "SMCI",
+    "TTD",
+    "DDOG",
+    "ZS",
+    "MELI",
+    "SQ"
+  ]
 }
