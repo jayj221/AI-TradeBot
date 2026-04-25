@@ -1,72 +1,72 @@
 {
   "NVDA": {
-    "price": 209.54,
+    "price": 208.27,
     "above_sma50": true,
     "above_sma200": true,
-    "pct_from_high": 0.0,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   },
   "META": {
-    "price": 678.03,
+    "price": 675.03,
     "above_sma50": true,
     "above_sma200": false,
-    "pct_from_high": -13.97,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   },
   "AMZN": {
-    "price": 262.93,
+    "price": 263.99,
     "above_sma50": true,
     "above_sma200": true,
-    "pct_from_high": 0.0,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   },
   "AAPL": {
-    "price": 269.88,
+    "price": 271.06,
     "above_sma50": true,
     "above_sma200": true,
-    "pct_from_high": -5.61,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   },
   "MSFT": {
-    "price": 419.56,
+    "price": 424.62,
     "above_sma50": true,
     "above_sma200": false,
-    "pct_from_high": -22.28,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   },
   "GOOGL": {
-    "price": 342.92,
+    "price": 344.4,
     "above_sma50": true,
     "above_sma200": true,
-    "pct_from_high": -0.15,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   },
   "CRWD": {
-    "price": 445.0,
+    "price": 448.13,
     "above_sma50": true,
     "above_sma200": false,
-    "pct_from_high": -20.18,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   },
   "ANET": {
-    "price": 178.88,
+    "price": 176.91,
     "above_sma50": true,
     "above_sma200": true,
-    "pct_from_high": 0.0,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   },
   "AXON": {
-    "price": 391.55,
+    "price": 397.12,
     "above_sma50": false,
     "above_sma200": false,
-    "pct_from_high": -55.04,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   },
   "DECK": {
-    "price": 108.85,
+    "price": 108.53,
     "above_sma50": true,
     "above_sma200": true,
-    "pct_from_high": -15.87,
-    "updated": "2026-04-24"
+    "pct_from_high": NaN,
+    "updated": "2026-04-26"
   }
 }
