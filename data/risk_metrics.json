@@ -1,9 +1,11 @@
 {
-  "date": "2026-04-26",
+  "date": "2026-04-28",
   "total_value": 100000.0,
   "cash": 100000.0,
+  "invested": 0,
   "return_pct": 0.0,
   "open_positions": 0,
-  "monthly_drawdown_stop": false,
-  "vix_adjusted_sizing": false
+  "total_trades": 0,
+  "win_rate": 0.0,
+  "monthly_drawdown_stop": false
 }
