@@ -1,35 +1,30 @@
 {
-  "date": "2026-04-28",
+  "date": "2026-04-30",
   "passed": [
     {
       "symbol": "NVDA",
-      "price": 210.08,
+      "price": 209.14,
       "trend_score": 7
     },
     {
       "symbol": "AMZN",
-      "price": 260.19,
+      "price": 262.51,
       "trend_score": 5
     },
     {
       "symbol": "AAPL",
-      "price": 269.55,
+      "price": 269.88,
       "trend_score": 6
     },
     {
       "symbol": "GOOGL",
-      "price": 349.29,
+      "price": 350.91,
       "trend_score": 7
     },
     {
       "symbol": "ANET",
-      "price": 163.5,
+      "price": 167.93,
       "trend_score": 7
-    },
-    {
-      "symbol": "DECK",
-      "price": 107.1,
-      "trend_score": 5
     }
   ],
   "failed": [
@@ -37,6 +32,7 @@
     "MSFT",
     "CRWD",
     "AXON",
+    "DECK",
     "SNOW",
     "DDOG",
     "ZS",
