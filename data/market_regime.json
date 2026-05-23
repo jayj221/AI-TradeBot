@@ -1,8 +1,7 @@
 {
-  "date": "2026-05-22",
+  "date": "2026-05-23",
   "regime": "UPTREND_UNDER_PRESSURE",
-  "spy_price": 741.28,
+  "spy_price": 745.64,
   "above_sma50": true,
-  "above_sma200": false,
-  "allow_new_buys": true
+  "above_sma200": false
 }
