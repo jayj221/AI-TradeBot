@@ -1,45 +1,37 @@
 {
-  "date": "2026-05-22",
+  "date": "2026-05-23",
   "passed": [
     {
       "symbol": "NVDA",
-      "price": 219.67,
-      "trend_score": 7
+      "price": 215.33,
+      "trend_score": 5
     },
     {
       "symbol": "AMZN",
-      "price": 268.32,
-      "trend_score": 7
+      "price": 266.32,
+      "trend_score": 5
     },
     {
       "symbol": "AAPL",
-      "price": 304.52,
-      "trend_score": 7
+      "price": 308.82,
+      "trend_score": 5
     },
     {
       "symbol": "GOOGL",
-      "price": 390.38,
-      "trend_score": 7
-    },
-    {
-      "symbol": "CRWD",
-      "price": 646.09,
-      "trend_score": 6
-    },
-    {
-      "symbol": "ANET",
-      "price": 145.74,
+      "price": 382.97,
       "trend_score": 5
     },
     {
       "symbol": "DDOG",
-      "price": 217.8,
-      "trend_score": 7
+      "price": 222.32,
+      "trend_score": 5
     }
   ],
   "failed": [
     "META",
     "MSFT",
+    "CRWD",
+    "ANET",
     "AXON",
     "DECK",
     "SNOW",
