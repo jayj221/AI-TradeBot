@@ -1,47 +1,35 @@
 {
-  "date": "2026-05-23",
+  "date": "2026-05-30",
   "signals": [
     {
       "symbol": "NVDA",
-      "price": 215.33,
-      "above_sma50": true,
-      "volume_ratio": 1.04,
-      "signal": "HOLD"
+      "price": 211.14,
+      "signal": "BUY"
     },
     {
       "symbol": "META",
-      "price": 610.26,
-      "above_sma50": false,
-      "volume_ratio": 0.71,
+      "price": 632.51,
       "signal": "HOLD"
     },
     {
       "symbol": "AMZN",
-      "price": 266.32,
-      "above_sma50": true,
-      "volume_ratio": 0.62,
-      "signal": "HOLD"
+      "price": 270.64,
+      "signal": "BUY"
     },
     {
       "symbol": "CRWD",
-      "price": 663.46,
-      "above_sma50": true,
-      "volume_ratio": 0.81,
-      "signal": "HOLD"
+      "price": 731.0,
+      "signal": "BUY"
     },
     {
       "symbol": "ANET",
-      "price": 154.03,
-      "above_sma50": true,
-      "volume_ratio": 1.14,
-      "signal": "HOLD"
+      "price": 159.47,
+      "signal": "BUY"
     },
     {
       "symbol": "DDOG",
-      "price": 222.32,
-      "above_sma50": true,
-      "volume_ratio": 0.89,
-      "signal": "HOLD"
+      "price": 247.35,
+      "signal": "BUY"
     }
   ]
 }
